@@ -1,0 +1,10 @@
+[Unit]
+Description=Update Github hosts service
+Wants=update-githubhosts.timer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/update-github-hosts.sh
+
+[Install]
+WantedBy=multi-user.target
