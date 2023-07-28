@@ -9,8 +9,8 @@ sudo chmod +x usr/local/bin/update-github-hosts.sh
 
 # Step 2
 Copy both `update-githubhosts.service` and `update-githubhosts.timer` to 
-/lib/systemd/system/ # if on Debian
-/usr/lib/systemd/system/ # if on Rhel or Fedora
+- /lib/systemd/system/ # if on Debian
+- /usr/lib/systemd/system/ # if on Rhel or Fedora
 
 # Step 3
 ```shell
