@@ -13,6 +13,7 @@ Copy both `update-githubhosts.service` and `update-githubhosts.timer` to
 - /usr/lib/systemd/system/ # if on Rhel or Fedora
 
 # Step 3
+Enable/Start service/timer
 ```shell
 sudo systemctl enable update-githubhosts.service
 sudo systemctl enable update-githubhosts.timer
@@ -20,8 +21,8 @@ sudo systemctl daemon-reload
 sudo systemctl start update-githubhosts.service
 sudo systemctl start update-githubhosts.timer
 ```
-
+# Check results
 ```shell
-journalctl -xe -u update-githubhosts.service # Check status log
+journalctl -xe -u update-githubhosts.service # Check service status log
 cat /etc/hosts # check if github hosts written in file
 ```
